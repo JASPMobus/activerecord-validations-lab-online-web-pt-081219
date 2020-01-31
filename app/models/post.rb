@@ -12,5 +12,4 @@ class Post < ActiveRecord::Base
   validates :category, inclusion: { in: %w(Fiction Non-Fiction) }
   include ActiveModel::Validations
   validates_with TitleValidator
-
 end
