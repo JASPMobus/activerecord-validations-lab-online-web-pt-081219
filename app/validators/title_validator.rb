@@ -4,7 +4,7 @@ class TitleValidator < ActiveModel::Validator
   def validate(record)
     if !record.title
       record.errors[:title] << "Your post must have a title!"
-    elsif record.title.match?(/Won't Believe|Secret|Top [0123456789]|Guess|True Facts/)
+    elsif !record.title.match?(/Won't Believe|Secret|Top [0123456789]|Guess/)
       record.errors[:title] << "No clickbait allowed!"
     end
   end
