@@ -1,3 +1,3 @@
-class TitleValidator < ActiveRecord::Validators
+class TitleValidator < ActiveRecord::Validator
   
 end
