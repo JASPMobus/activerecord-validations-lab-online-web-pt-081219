@@ -6,7 +6,7 @@ class Post < ActiveRecord::Base
 #  This step requires an `inclusion` validator, which was not outlined in the
 #  README lesson. You'll need to refer to the [Rails guide][ar_validations] to
 #  look up how to use it.
-  validates :title, presence: true
+
   validates :content, length: { minimum: 250 }
   validates :summary, length: { maximum: 250 }
   validates :category, inclusion: { in: %w(Fiction Non-Fiction) }
